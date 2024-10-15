@@ -82,7 +82,10 @@ export default function Home() {
         </ul>
 
         <div className="flex justify-center space-x-6 text-2xl text-gray-700">
-          <a href="https://github.com" aria-label="GitHub">
+          <a
+            href="https://github.com/JFranciscoRobles/webpwizard"
+            aria-label="GitHub - Webpwizard Repository"
+          >
             <GithubIcon />
           </a>
         </div>
