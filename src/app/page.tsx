@@ -1,100 +1,91 @@
-import Image from "next/image";
+"use client";
+import { ConvertedImagesList } from "@/components/converted-images-list";
+import FileUpload from "@/components/file-upload";
+import OutputSettings from "@/components/output-settings";
+import QueuedImages from "@/components/queued-images";
+import {
+  convertedImagesAtom,
+  isConvertingAtom,
+  queuedImagesAtom,
+} from "@/context/atom";
+import { cn } from "@/lib/utils";
+import { useAtomValue } from "jotai";
+import { GithubIcon } from "lucide-react";
 
 export default function Home() {
+  const queuedImages = useAtomValue(queuedImagesAtom);
+  const convertedImages = useAtomValue(convertedImagesAtom);
+  const isConverting = useAtomValue(isConvertingAtom);
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
+    <div className="container mx-auto px-4 md:px-8 mt-10">
+      <header className="flex justify-center mb-4">
+        <h1 className="text-4xl md:text-5xl font-bold uppercase text-center">
+          Webp Wizard
+        </h1>
+      </header>
+
+      <section className="w-full mb-6">
+        <div className="bg-blue-100 border border-blue-300 p-4 rounded-lg text-center shadow-sm">
+          <p className="text-sm md:text-base text-gray-700">
+            Webp Wizard is a tool for converting images to WebP, PNG, or JPG
+            directly in your browser. All conversions happen locally, ensuring
+            privacy, with no files uploaded to servers.
+          </p>
+        </div>
+      </section>
+
+      <div className="w-full p-6 bg-secondary rounded-lg shadow-xl grid gap-6 grid-cols-1 lg:grid-cols-[min-content,1fr] min-h-[600px]">
+        <div className="min-w-64">
+          <OutputSettings />
+        </div>
+
+        <div className="min-w-64">
+          {!convertedImages?.length && !queuedImages?.length && <FileUpload />}
+
+          {queuedImages.length > 0 && (
+            <div className={cn(!isConverting ? "block" : "hidden")}>
+              <QueuedImages />
+            </div>
+          )}
+
+          {convertedImages.length > 0 && <ConvertedImagesList />}
+        </div>
+      </div>
+
+      <div className="mt-6">
+        <ins
+          className="adsbygoogle"
+          style={{ display: "block", width: "100%", height: "90px" }}
+          data-ad-client="ca-pub-XXXXXXXXXX"
+          data-ad-slot="XXXXXXX"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        ></ins>
+      </div>
+
+      <footer className="mt-10 text-center space-y-4">
+        <ul className="text-sm text-gray-600">
+          <li>
+            You can convert images to <strong>WebP, PNG, and JPG</strong>.
+            Please note that the <strong>quality option</strong> does not apply
+            to PNG outputs.
+          </li>
+          <li>
+            All processes are performed <strong>locally on your device</strong>,
+            meaning images are <strong>never uploaded</strong> to any servers.
+          </li>
+          <li>
+            Want to contribute? Check out the project on <strong>GitHub</strong>
             .
           </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+        </ul>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+        <div className="flex justify-center space-x-6 text-2xl text-gray-700">
+          <a href="https://github.com" aria-label="GitHub">
+            <GithubIcon />
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
       </footer>
     </div>
   );
