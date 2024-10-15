@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /*?*
+Sitemap: https://webpwizard.com/sitemap.xml
