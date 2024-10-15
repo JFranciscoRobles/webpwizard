@@ -63,12 +63,12 @@ export const ConvertedImagesList = () => {
       <h2 className="text-xl font-medium p-2 bg-primary text-primary-foreground w-fit rounded-xl mb-4">
         Converted Images
       </h2>
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 h-[600px] place-content-start overflow-auto p-6 bg-background rounded-xl">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 h-[400px] lg:h-[600px] place-content-start overflow-auto">
         {convertedImages.map((image, index) => (
           <div key={index} className="relative group">
             <Dialog>
               <DialogTrigger asChild>
-                <div className="w-full h-40 bg-gray-200 rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-300 ease-in-out">
+                <div className="w-full h-auto lg:h-40 bg-gray-200 rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-300 ease-in-out">
                   {image.status === "queued" ? (
                     <div className="flex justify-center items-center h-full">
                       <Clock className="w-10 h-10 text-gray-400" />
@@ -121,7 +121,7 @@ export const ConvertedImagesList = () => {
           </div>
         ))}
       </div>
-      <div className="flex space-x-4 mt-4">
+      <div className="flex gap-6 mt-4 flex-wrap ">
         <ResetButton />
         {convertedImages.some((img) => img.status === "done") && (
           <Button onClick={handleDownloadAll} className="flex-1">

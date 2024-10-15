@@ -26,12 +26,12 @@ export default function QueuedImages() {
       <h2 className="text-xl font-medium p-2 bg-primary text-primary-foreground w-fit rounded-xl mb-4">
         Image Queue
       </h2>
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 h-[600px] place-content-start overflow-auto">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 h-[400px] lg:h-[600px] place-content-start overflow-auto">
         {queuedImages.map((image, index) => (
           <div key={index} className="relative group">
             <Dialog>
               <DialogTrigger asChild>
-                <div className="w-full h-40 bg-gray-200 rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-300 ease-in-out">
+                <div className="w-full h-auto lg:h-40 bg-gray-200 rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-300 ease-in-out">
                   <img
                     src={image.preview}
                     className="w-full h-full object-cover transition-transform duration-300 ease-in-out hover:scale-105"
