@@ -53,17 +53,6 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-6">
-        <ins
-          className="adsbygoogle"
-          style={{ display: "block", width: "100%", height: "90px" }}
-          data-ad-client="ca-pub-XXXXXXXXXX"
-          data-ad-slot="XXXXXXX"
-          data-ad-format="auto"
-          data-full-width-responsive="true"
-        ></ins>
-      </div>
-
       <footer className="mt-10 text-center space-y-4">
         <ul className="text-sm text-gray-600">
           <li>
