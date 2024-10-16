@@ -54,22 +54,6 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-6">
-        <ins
-          className="adsbygoogle"
-          style={{ display: "block", width: "100%", height: "90px" }}
-          data-ad-client="pub-8656504095828628"
-          data-ad-slot="3233206018"
-          data-ad-format="auto"
-          data-full-width-responsive="true"
-        />
-        <Script id="ads-init" strategy="afterInteractive">
-          {`
-    (adsbygoogle = window.adsbygoogle || []).push({});
-  `}
-        </Script>
-      </div>
-
       <footer className="mt-10 text-center space-y-4">
         <ul className="text-sm text-gray-600">
           <li>
