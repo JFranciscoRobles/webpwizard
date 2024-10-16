@@ -11,7 +11,6 @@ import {
 import { cn } from "@/lib/utils";
 import { useAtomValue } from "jotai";
 import { GithubIcon } from "lucide-react";
-import Script from "next/script";
 
 export default function Home() {
   const queuedImages = useAtomValue(queuedImagesAtom);
