@@ -17,16 +17,24 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "WebpWizard - Converting images to WebP",
+  title: "Convert Images to WebP, PNG, or JPG – Fast & Free with WebpWizard",
   description:
-    "Webp Wizard is a tool for converting images to WebP, PNG, or JPG directly in your browser. All conversions happen locally, ensuring privacy, with no files uploaded to servers.",
+    "Instantly convert images to WebP, PNG, or JPG using WebpWizard. No uploads required – all processes happen locally for maximum privacy and speed.",
   keywords: [
-    "image converter",
-    "WebP conversion",
-    "PNG to WebP",
-    "JPG to WebP",
-    "convert images online",
-    "image conversion tool",
+    "image converter online",
+    "WebP converter tool",
+    "PNG to WebP converter",
+    "JPG to WebP online",
+    "convert images to WebP",
+    "free image conversion tool",
+    "batch image converter",
+    "optimize images for WebP",
+    "convert JPG to PNG",
+    "compress images online",
+    "image format converter",
+    "fast WebP conversion",
+    "convert photos to WebP",
+    "secure image converter"
   ],
   authors: [
     { name: "J. Francisco Robles", url: "https://github.com/JFranciscoRobles" },
