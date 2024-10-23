@@ -48,9 +48,9 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "WebpWizard - Convert Images Easily",
+    title: "Convert Images to WebP, PNG, or JPG – Fast & Free with WebpWizard",
     description:
-      "Convert images to WebP, PNG, or JPG directly in your browser with WebpWizard. All processes happen locally for maximum privacy.",
+      "Instantly convert images to WebP, PNG, or JPG using WebpWizard. No uploads required – all processes happen locally for maximum privacy and speed.",
     url: "https://webpwizard.com",
     type: "website",
     images: [
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "WebpWizard - Convert Images Easily",
+        alt: "Convert Images to WebP, PNG, or JPG – Fast & Free with WebpWizard.",
       },
     ],
   },
