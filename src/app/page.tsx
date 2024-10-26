@@ -21,8 +21,8 @@ export default function Home() {
     <div className="container mx-auto px-6 md:px-12 mt-12">
       {/* Header */}
       <header className="flex justify-center mb-8">
-        <h1 className="text-5xl md:text-6xl font-extrabold uppercase text-center text-indigo-600 tracking-wide">
-          Webp Wizard
+        <h1 className="text-4xl md:text-5xl font-extrabold uppercase text-center text-indigo-600 tracking-wide">
+          Convert Images to WebP, PNG, or JPG – Fast & Free with WebpWizard
         </h1>
       </header>
 
