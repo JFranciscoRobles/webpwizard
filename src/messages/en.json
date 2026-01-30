@@ -1,0 +1,278 @@
+{
+  "meta": {
+    "title": "WebpWizard - Free Online Image Converter | WebP, PNG, JPG",
+    "description": "Convert images to WebP, PNG, or JPG instantly. Free, fast, and 100% private - all processing happens in your browser. No uploads, no waiting.",
+    "keywords": "image converter, WebP converter, PNG to WebP, JPG to WebP, bulk image converter, free image tool"
+  },
+  "header": {
+    "title": "WebpWizard",
+    "description": "Convert to WebP, PNG, or JPG — Fast & private"
+  },
+  "features": {
+    "title": "Lightning Fast",
+    "description": "All processing happens locally in your browser. No uploads, no waiting.",
+    "privacy": {
+      "title": "100% Private",
+      "description": "Your images never leave your device. No servers, no tracking, no worries."
+    },
+    "batch": {
+      "title": "Batch Convert",
+      "description": "Convert multiple images at once and download them as a single ZIP file."
+    }
+  },
+  "howItWorks": {
+    "title": "How it works",
+    "steps": {
+      "upload": {
+        "title": "Upload",
+        "description": "Drag & drop or select your images"
+      },
+      "configure": {
+        "title": "Configure",
+        "description": "Choose format, quality, and size"
+      },
+      "download": {
+        "title": "Download",
+        "description": "Get your converted images instantly"
+      }
+    }
+  },
+  "upload": {
+    "title": "Drop images here",
+    "subtitle": "or click to browse from your device",
+    "selectImages": "Select Images",
+    "error": "Only JPEG, PNG, and WebP images are allowed."
+  },
+  "settings": {
+    "title": "Settings",
+    "outputFormat": "Output Format",
+    "formats": {
+      "webp": "WebP",
+      "jpeg": "JPEG",
+      "png": "PNG"
+    },
+    "formatDescriptions": {
+      "webp": "Best compression, modern format",
+      "jpeg": "Maximum compatibility",
+      "png": "Lossless compression"
+    },
+    "quality": {
+      "title": "Quality",
+      "level": "Quality Level",
+      "notAvailable": "Quality (N/A for PNG)",
+      "smaller": "Smaller file",
+      "better": "Better quality",
+      "labels": {
+        "low": "Low",
+        "medium": "Medium",
+        "good": "Good",
+        "best": "Best"
+      }
+    },
+    "resize": {
+      "title": "Resize",
+      "imageSize": "Image Size",
+      "original": "Original",
+      "small": "Small",
+      "medium": "Medium",
+      "large": "Large"
+    },
+    "fileNaming": {
+      "title": "File Naming",
+      "placeholder": "e.g., converted_",
+      "label": "Optional prefix for converted files",
+      "preview": "Preview:"
+    },
+    "ready": {
+      "title": "Ready to Convert",
+      "images": "Images"
+    }
+  },
+  "queue": {
+    "title": "Queue",
+    "images": "images ready to convert",
+    "noImages": "No images in queue. Add images to get started."
+  },
+  "converting": "Converting...",
+  "startConversion": "Start Conversion",
+  "status": {
+    "queued": "Queued",
+    "converting": "Converting...",
+    "finalizing": "Finalizing...",
+    "done": "Done",
+    "error": "Error"
+  },
+  "converted": {
+    "title": "Converted Images",
+    "complete": "of {count} complete",
+    "downloadAll": "Download All ({count}) as ZIP",
+    "downloadAllShort": "Download All",
+    "asZip": "as ZIP",
+    "reset": "Reset"
+  },
+  "toasts": {
+    "noImages": {
+      "title": "No images in queue",
+      "description": "Please add some images before starting the conversion."
+    },
+    "conversionComplete": {
+      "title": "Conversion complete",
+      "description": "All {count} image(s) have been successfully converted.",
+      "descriptionSingle": "1 image has been successfully converted."
+    },
+    "conversionWithWarnings": {
+      "title": "Conversion complete with warnings",
+      "description": "{success} image(s) converted successfully. {failed} failed."
+    },
+    "conversionError": {
+      "title": "Error during conversion",
+      "description": "Some images could not be converted."
+    },
+    "downloadStarted": {
+      "title": "Download started",
+      "description": "{fileName} is being downloaded."
+    },
+    "downloadAllStarted": {
+      "title": "Download started",
+      "description": "All converted images are being downloaded as a ZIP."
+    },
+    "resetComplete": {
+      "title": "Reset Complete",
+      "description": "All images and settings have been reset."
+    }
+  },
+  "footer": {
+    "title": "WebpWizard — Free image converter",
+    "github": "GitHub",
+    "privacy": "All conversions happen locally in your browser. Your images are never uploaded to any server.",
+    "about": "About",
+    "privacyPolicy": "Privacy Policy",
+    "terms": "Terms & Conditions"
+  },
+  "stepper": {
+    "queue": "Queue",
+    "settings": "Settings",
+    "back": "Back",
+    "next": "Next",
+    "convert": "Convert"
+  },
+  "pages": {
+    "about": {
+      "meta": {
+        "title": "About WebpWizard - Free Online Image Converter",
+        "description": "Learn about WebpWizard, the free online image converter that prioritizes your privacy. Convert WebP, PNG, and JPG files locally in your browser."
+      },
+      "title": "About WebpWizard",
+      "subtitle": "Fast, free, and private image conversion",
+      "whatIs": {
+        "title": "What is WebpWizard?",
+        "description": "WebpWizard is a free online image converter that runs entirely in your browser. Unlike other converters, we don't upload your images to any server - all processing happens locally on your device."
+      },
+      "features": {
+        "title": "Why Choose WebpWizard?",
+        "privacy": {
+          "title": "100% Private",
+          "description": "Your images never leave your device. No server uploads, no data collection."
+        },
+        "fast": {
+          "title": "Lightning Fast",
+          "description": "Convert images instantly with no upload or download wait times."
+        },
+        "free": {
+          "title": "Completely Free",
+          "description": "No subscriptions, no hidden fees, no account required."
+        },
+        "batch": {
+          "title": "Batch Conversion",
+          "description": "Convert multiple images at once and download as a ZIP file."
+        }
+      },
+      "howItWorks": {
+        "title": "How It Works",
+        "description": "We use modern web technologies to process images directly in your browser:"
+      },
+      "step1": "Upload your images (drag & drop or click to browse)",
+      "step2": "Choose output format (WebP, PNG, or JPG), quality, and size",
+      "step3": "Download your converted images instantly",
+      "openSource": {
+        "title": "Open Source",
+        "description": "WebpWizard is open source software. You can check the code on GitHub."
+      }
+    },
+    "privacy": {
+      "meta": {
+        "title": "Privacy Policy - WebpWizard",
+        "description": "WebpWizard privacy policy. Learn how we protect your privacy - all image processing happens locally in your browser."
+      },
+      "title": "Privacy Policy",
+      "lastUpdated": "Last updated: January 2025",
+      "intro": "At WebpWizard, we take your privacy seriously. This policy explains how we handle your data.",
+      "noDataCollection": {
+        "title": "No Data Collection",
+        "description": "All image processing happens locally in your browser. Your images are NEVER uploaded to our servers or any third-party service."
+      },
+      "whatWeCollect": {
+        "title": "What We Collect",
+        "analytics": {
+          "title": "Anonymous Analytics",
+          "description": "We use Google Analytics to understand how people use our site. This data is anonymous and doesn't include any personal information or image data."
+        }
+      },
+      "cookies": {
+        "title": "Cookies",
+        "description": "We use minimal cookies for analytics only. No tracking cookies are used."
+      },
+      "thirdParty": {
+        "title": "Third-Party Services",
+        "description": "We use Google Analytics for anonymous usage statistics. No other third-party services have access to your data."
+      },
+      "yourRights": {
+        "title": "Your Rights",
+        "description": "Since we don't collect personal data, there's nothing to request or delete. Your images never leave your device."
+      },
+      "contact": {
+        "title": "Questions?",
+        "description": "If you have questions about this privacy policy, please contact us through our GitHub repository."
+      }
+    },
+    "terms": {
+      "meta": {
+        "title": "Terms & Conditions - WebpWizard",
+        "description": "WebpWizard terms and conditions. Free online image converter with no registration required."
+      },
+      "title": "Terms & Conditions",
+      "lastUpdated": "Last updated: January 2025",
+      "intro": "By using WebpWizard, you agree to these terms. If you don't agree, please don't use this service.",
+      "service": {
+        "title": "The Service",
+        "description": "WebpWizard is a free online image converter that converts images between WebP, PNG, and JPG formats. The service is provided 'as is' without any warranties."
+      },
+      "noAccount": {
+        "title": "No Registration Required",
+        "description": "You don't need to create an account to use our service. No personal information is required."
+      },
+      "limitations": {
+        "title": "Limitations",
+        "description": "While we strive for accuracy, we cannot guarantee that all conversions will be perfect. Always keep backups of your original images."
+      },
+      "intellectual": {
+        "title": "Intellectual Property",
+        "description": "You retain all rights to your images. We don't claim any ownership of content you process through our service."
+      },
+      "liability": {
+        "title": "Limitation of Liability",
+        "description": "WebpWizard and its creators shall not be liable for any damages arising from the use of this service."
+      },
+      "changes": {
+        "title": "Changes to Terms",
+        "description": "We may update these terms at any time. Continued use of the service constitutes acceptance of changes."
+      }
+    }
+  },
+  "common": {
+    "back": "Back",
+    "home": "Home",
+    "readMore": "Read more",
+    "learnMore": "Learn more"
+  }
+}

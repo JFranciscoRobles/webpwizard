@@ -1,23 +1,21 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
+
 import { useAtomValue } from "jotai";
 import { Button } from "./ui/button";
-import { Download, Loader2, Clock } from "lucide-react";
-import { convertedImagesAtom } from "@/context/atom";
+import { CheckCircle2, Archive } from "lucide-react";
+import { convertedImagesAtom, filePrefixAtom } from "@/context/atom";
 import { toast } from "@/hooks/use-toast";
 import JSZip from "jszip";
-import {
-  Dialog,
-  DialogTrigger,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogFooter,
-} from "./ui/dialog";
+import { ConvertedImageItem } from "@/components/images/converted-image-item";
+import { cn } from "@/lib/utils";
 import ResetButton from "./reset-button";
+import { useTranslations } from "next-intl";
 
 export const ConvertedImagesList = () => {
+  const t = useTranslations('converted');
+  const tToast = useTranslations('toasts');
   const convertedImages = useAtomValue(convertedImagesAtom);
+  const filePrefix = useAtomValue(filePrefixAtom);
 
   const handleDownload = (url: string, fileName: string) => {
     const link = document.createElement("a");
@@ -27,106 +25,102 @@ export const ConvertedImagesList = () => {
     link.click();
     document.body.removeChild(link);
     toast({
-      title: "Download started",
-      description: `${fileName} is being downloaded.`,
+      title: tToast('downloadStarted.title'),
+      description: tToast('downloadStarted.description', { fileName }),
+      variant: "success",
     });
   };
 
   const handleDownloadAll = async () => {
+    console.log(`[ConvertedImagesList] Starting download all. Images: ${convertedImages.length}`);
     const zip = new JSZip();
     const promises = convertedImages
-      .filter((image) => image.status === "done")
-      .map(async (image) => {
-        const response = await fetch(image.url);
-        const blob = await response.blob();
-        zip.file(image.fileName, blob);
+      .filter((image) => image.status === "done" && image.url)
+      .map(async (image, idx) => {
+        try {
+          console.log(`[ConvertedImagesList] Fetching image ${idx + 1}: ${image.fileName}, url: ${image.url}`);
+          const response = await fetch(image.url);
+          if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+          }
+          const blob = await response.blob();
+          console.log(`[ConvertedImagesList] Image ${idx + 1} fetched, size: ${blob.size} bytes`);
+          zip.file(image.fileName, blob);
+        } catch (error) {
+          console.error(`[ConvertedImagesList] Failed to fetch image ${image.fileName}:`, error);
+        }
       });
 
+    console.log(`[ConvertedImagesList] Waiting for all fetches to complete...`);
     await Promise.all(promises);
+    console.log(`[ConvertedImagesList] All fetches complete, generating ZIP...`);
+
     const content = await zip.generateAsync({ type: "blob" });
+    console.log(`[ConvertedImagesList] ZIP generated, size: ${content.size} bytes`);
+
     const url = URL.createObjectURL(content);
     const link = document.createElement("a");
     link.href = url;
-    link.download = "converted_images.zip";
+    link.download = filePrefix ? `${filePrefix}images.zip` : "converted_images.zip";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
     URL.revokeObjectURL(url);
+
+    console.log(`[ConvertedImagesList] Download triggered`);
     toast({
-      title: "Download started",
-      description: "All converted images are being downloaded as a ZIP.",
+      title: tToast('downloadAllStarted.title'),
+      description: tToast('downloadAllStarted.description'),
+      variant: "success",
     });
   };
 
+  const doneCount = convertedImages.filter((img) => img.status === "done").length;
+  const totalCount = convertedImages.length;
+
   return (
-    <div className="flex flex-col w-full p-6 bg-background rounded-xl">
-      <h2 className="text-xl font-medium p-2 bg-primary text-primary-foreground w-fit rounded-xl mb-4">
-        Converted Images
-      </h2>
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 h-[400px] lg:h-[600px] place-content-start overflow-auto">
-        {convertedImages.map((image, index) => (
-          <div key={index} className="relative group">
-            <Dialog>
-              <DialogTrigger asChild>
-                <div className="w-full h-auto lg:h-40 bg-gray-200 rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-300 ease-in-out">
-                  {image.status === "queued" ? (
-                    <div className="flex justify-center items-center h-full">
-                      <Clock className="w-10 h-10 text-gray-400" />
-                      <span className="ml-2 text-sm text-gray-500">Queued</span>
-                    </div>
-                  ) : image.status === "converting" ? (
-                    <div className="flex justify-center items-center h-full">
-                      <Loader2 className="w-10 h-10 animate-spin text-gray-400" />
-                    </div>
-                  ) : (
-                    <img
-                      src={image.url}
-                      alt={`Converted ${index}`}
-                      className="w-full h-full object-cover transition-transform duration-300 ease-in-out hover:scale-105"
-                    />
-                  )}
-                </div>
-              </DialogTrigger>
-
-              {image.status === "done" && (
-                <DialogContent className="max-w-3xl p-6 bg-white rounded-lg shadow-lg">
-                  <DialogHeader>
-                    <DialogTitle className="text-xl font-semibold text-gray-800">
-                      Image Preview
-                    </DialogTitle>
-                  </DialogHeader>
-                  <div className="mt-4 flex justify-center items-center">
-                    <img
-                      src={image.url}
-                      alt={`Converted ${index}`}
-                      className="max-w-full h-auto rounded-lg shadow-md"
-                    />
-                  </div>
-                  <DialogFooter className="mt-4 text-sm text-primary-foreground bg-primary p-4 rounded-xl">
-                    {image.fileName}
-                  </DialogFooter>
-                </DialogContent>
-              )}
-            </Dialog>
-
-            {image.status === "done" && (
-              <Button
-                size="icon"
-                onClick={() => handleDownload(image.url, image.fileName)}
-                className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity"
-              >
-                <Download className="w-4 h-4" />
-              </Button>
-            )}
+    <div className="flex flex-col w-full h-full max-h-150 p-6 bg-card rounded-2xl border border-border/50 shadow-sm">
+      {/* Header */}
+      <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center gap-3">
+          <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-green-500/10 text-green-600 dark:text-green-400">
+            <CheckCircle2 className="w-5 h-5" />
           </div>
+          <div>
+            <h2 className="text-lg font-semibold">{t('title')}</h2>
+            <p className="text-sm text-muted-foreground">
+              {t('complete', { count: totalCount })}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Images Grid */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 mb-6 flex-1 overflow-auto p-1">
+        {convertedImages.map((image, index) => (
+          <ConvertedImageItem
+            key={index}
+            image={image}
+            index={index}
+            onDownload={handleDownload}
+          />
         ))}
       </div>
-      <div className="flex gap-6 mt-4 flex-wrap ">
-        <ResetButton />
-        {convertedImages.some((img) => img.status === "done") && (
-          <Button onClick={handleDownloadAll} className="flex-1">
-            <Download className="w-4 h-4 mr-2" />
-            Download All as ZIP
+
+      {/* Action Buttons */}
+      <div className="flex flex-col sm:flex-row gap-3">
+        <ResetButton className="flex-1" />
+        {doneCount > 0 && (
+          <Button
+            onClick={handleDownloadAll}
+            className="flex-1 shadow-lg shadow-primary/25 hover:shadow-primary/30 transition-shadow min-h-11 sm:min-h-0"
+            size="default"
+          >
+            <Archive className="w-4 h-4 sm:w-5 sm:h-5 mr-1.5" />
+            <span className="text-sm sm:text-base">
+              {t('downloadAllShort')}
+              <span className="hidden sm:inline"> ({t('asZip', { count: doneCount })})</span>
+            </span>
           </Button>
         )}
       </div>

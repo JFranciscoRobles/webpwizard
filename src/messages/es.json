@@ -1,0 +1,278 @@
+{
+  "meta": {
+    "title": "WebpWizard - Convertidor de Imágenes Gratis Online | WebP, PNG, JPG",
+    "description": "Convierte imágenes a WebP, PNG o JPG al instante. Gratis, rápido y 100% privado - todo el procesamiento ocurre en tu navegador. Sin subidas, sin esperas.",
+    "keywords": "convertidor de imágenes, convertidor WebP, PNG a WebP, JPG a WebP, convertidor de imágenes por lotes, herramienta de imágenes gratis"
+  },
+  "header": {
+    "title": "WebpWizard",
+    "description": "Convierte a WebP, PNG o JPG — Rápido y privado"
+  },
+  "features": {
+    "title": "Ultrarrápido",
+    "description": "Todo el procesamiento ocurre localmente en tu navegador. Sin subidas, sin esperas.",
+    "privacy": {
+      "title": "100% Privado",
+      "description": "Tus imágenes nunca salen de tu dispositivo. Sin servidores, sin rastreo, sin preocupaciones."
+    },
+    "batch": {
+      "title": "Conversión por Lotes",
+      "description": "Convierte múltiples imágenes a la vez y descárgalas como un archivo ZIP."
+    }
+  },
+  "howItWorks": {
+    "title": "Cómo funciona",
+    "steps": {
+      "upload": {
+        "title": "Subir",
+        "description": "Arrastra y suelta o selecciona tus imágenes"
+      },
+      "configure": {
+        "title": "Configurar",
+        "description": "Elige formato, calidad y tamaño"
+      },
+      "download": {
+        "title": "Descargar",
+        "description": "Obtén tus imágenes convertidas al instante"
+      }
+    }
+  },
+  "upload": {
+    "title": "Arrastra imágenes aquí",
+    "subtitle": "o haz clic para explorar en tu dispositivo",
+    "selectImages": "Seleccionar Imágenes",
+    "error": "Solo se permiten imágenes JPEG, PNG y WebP."
+  },
+  "settings": {
+    "title": "Configuración",
+    "outputFormat": "Formato de Salida",
+    "formats": {
+      "webp": "WebP",
+      "jpeg": "JPEG",
+      "png": "PNG"
+    },
+    "formatDescriptions": {
+      "webp": "Mejor compresión, formato moderno",
+      "jpeg": "Máxima compatibilidad",
+      "png": "Compresión sin pérdida"
+    },
+    "quality": {
+      "title": "Calidad",
+      "level": "Nivel de Calidad",
+      "notAvailable": "Calidad (no disponible para PNG)",
+      "smaller": "Archivo más pequeño",
+      "better": "Mejor calidad",
+      "labels": {
+        "low": "Baja",
+        "medium": "Media",
+        "good": "Buena",
+        "best": "Mejor"
+      }
+    },
+    "resize": {
+      "title": "Redimensionar",
+      "imageSize": "Tamaño de Imagen",
+      "original": "Original",
+      "small": "Pequeño",
+      "medium": "Mediano",
+      "large": "Grande"
+    },
+    "fileNaming": {
+      "title": "Nombre de Archivo",
+      "placeholder": "ej., convertido_",
+      "label": "Prefijo opcional para archivos convertidos",
+      "preview": "Vista previa:"
+    },
+    "ready": {
+      "title": "Listo para Convertir",
+      "images": "Imágenes"
+    }
+  },
+  "queue": {
+    "title": "Cola",
+    "images": "imágenes listas para convertir",
+    "noImages": "No hay imágenes en cola. Agrega imágenes para comenzar."
+  },
+  "converting": "Convirtiendo...",
+  "startConversion": "Iniciar Conversión",
+  "status": {
+    "queued": "En cola",
+    "converting": "Convirtiendo...",
+    "finalizing": "Finalizando...",
+    "done": "Listo",
+    "error": "Error"
+  },
+  "converted": {
+    "title": "Imágenes Convertidas",
+    "complete": "de {count} completas",
+    "downloadAll": "Descargar Todas ({count}) como ZIP",
+    "downloadAllShort": "Descargar Todo",
+    "asZip": "como ZIP",
+    "reset": "Restablecer"
+  },
+  "toasts": {
+    "noImages": {
+      "title": "No hay imágenes en cola",
+      "description": "Por favor agrega algunas imágenes antes de iniciar la conversión."
+    },
+    "conversionComplete": {
+      "title": "Conversión completa",
+      "description": "Todas las {count} imágenes han sido convertidas exitosamente.",
+      "descriptionSingle": "1 imagen ha sido convertida exitosamente."
+    },
+    "conversionWithWarnings": {
+      "title": "Conversión completa con advertencias",
+      "description": "{success} imagen(es) convertida(s) exitosamente. {failed} fallaron."
+    },
+    "conversionError": {
+      "title": "Error durante la conversión",
+      "description": "Algunas imágenes no pudieron ser convertidas."
+    },
+    "downloadStarted": {
+      "title": "Descarga iniciada",
+      "description": "{fileName} se está descargando."
+    },
+    "downloadAllStarted": {
+      "title": "Descarga iniciada",
+      "description": "Todas las imágenes convertidas se están descargando como ZIP."
+    },
+    "resetComplete": {
+      "title": "Restablecimiento Completo",
+      "description": "Todas las imágenes y configuraciones han sido restablecidas."
+    }
+  },
+  "footer": {
+    "title": "WebpWizard — Convertidor de imágenes gratuito",
+    "github": "GitHub",
+    "privacy": "Todas las conversiones ocurren localmente en tu navegador. Tus imágenes nunca se suben a ningún servidor.",
+    "about": "Acerca de",
+    "privacyPolicy": "Política de Privacidad",
+    "terms": "Términos y Condiciones"
+  },
+  "stepper": {
+    "queue": "Cola",
+    "settings": "Configuración",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "convert": "Convertir"
+  },
+  "pages": {
+    "about": {
+      "meta": {
+        "title": "Acerca de WebpWizard - Convertidor de Imágenes Gratis Online",
+        "description": "Conoce sobre WebpWizard, el convertidor de imágenes gratis en línea que prioriza tu privacidad. Convierte archivos WebP, PNG y JPG localmente en tu navegador."
+      },
+      "title": "Acerca de WebpWizard",
+      "subtitle": "Conversión de imágenes rápida, gratis y privada",
+      "whatIs": {
+        "title": "¿Qué es WebpWizard?",
+        "description": "WebpWizard es un convertidor de imágenes gratis en línea que se ejecuta completamente en tu navegador. A diferencia de otros convertidores, no subimos tus imágenes a ningún servidor; todo el procesamiento ocurre localmente en tu dispositivo."
+      },
+      "features": {
+        "title": "¿Por qué elegir WebpWizard?",
+        "privacy": {
+          "title": "100% Privado",
+          "description": "Tus imágenes nunca salen de tu dispositivo. Sin subidas a servidores, sin recopilación de datos."
+        },
+        "fast": {
+          "title": "Ultrarrápido",
+          "description": "Convierte imágenes al instante sin tiempos de espera de subida o descarga."
+        },
+        "free": {
+          "title": "Completamente Gratis",
+          "description": "Sin suscripciones, sin tarifas ocultas, sin cuenta requerida."
+        },
+        "batch": {
+          "title": "Conversión por Lotes",
+          "description": "Convierte múltiples imágenes a la vez y descárgalas como un archivo ZIP."
+        }
+      },
+      "howItWorks": {
+        "title": "Cómo Funciona",
+        "description": "Usamos tecnologías web modernas para procesar imágenes directamente en tu navegador:"
+      },
+      "step1": "Sube tus imágenes (arrastra y suelta o haz clic para explorar)",
+      "step2": "Elige el formato de salida (WebP, PNG o JPG), calidad y tamaño",
+      "step3": "Descarga tus imágenes convertidas al instante",
+      "openSource": {
+        "title": "Código Abierto",
+        "description": "WebpWizard es software de código abierto. Puedes ver el código en GitHub."
+      }
+    },
+    "privacy": {
+      "meta": {
+        "title": "Política de Privacidad - WebpWizard",
+        "description": "Política de privacidad de WebpWizard. Aprende cómo protegemos tu privacidad - todo el procesamiento de imágenes ocurre localmente en tu navegador."
+      },
+      "title": "Política de Privacidad",
+      "lastUpdated": "Última actualización: Enero 2025",
+      "intro": "En WebpWizard, tomamos tu privacidad en serio. Esta política explica cómo manejamos tus datos.",
+      "noDataCollection": {
+        "title": "Sin Recopilación de Datos",
+        "description": "Todo el procesamiento de imágenes ocurre localmente en tu navegador. Tus imágenes NUNCA se suben a nuestros servidores ni a ningún servicio de terceros."
+      },
+      "whatWeCollect": {
+        "title": "Qué Recopilamos",
+        "analytics": {
+          "title": "Analíticas Anónimas",
+          "description": "Usamos Google Analytics para entender cómo las personas usan nuestro sitio. Estos datos son anónimos y no incluyen información personal ni datos de imágenes."
+        }
+      },
+      "cookies": {
+        "title": "Cookies",
+        "description": "Usamos cookies mínimas solo para analíticas. No se usan cookies de rastreo."
+      },
+      "thirdParty": {
+        "title": "Servicios de Terceros",
+        "description": "Usamos Google Analytics para estadísticas de uso anónimas. Ningún otro servicio de terceros tiene acceso a tus datos."
+      },
+      "yourRights": {
+        "title": "Tus Derechos",
+        "description": "Dado que no recopilamos datos personales, no hay nada que solicitar o eliminar. Tus imágenes nunca salen de tu dispositivo."
+      },
+      "contact": {
+        "title": "¿Preguntas?",
+        "description": "Si tienes preguntas sobre esta política de privacidad, contáctanos a través de nuestro repositorio de GitHub."
+      }
+    },
+    "terms": {
+      "meta": {
+        "title": "Términos y Condiciones - WebpWizard",
+        "description": "Términos y condiciones de WebpWizard. Convertidor de imágenes gratis en línea sin registro requerido."
+      },
+      "title": "Términos y Condiciones",
+      "lastUpdated": "Última actualización: Enero 2025",
+      "intro": "Al usar WebpWizard, aceptas estos términos. Si no estás de acuerdo, por favor no uses este servicio.",
+      "service": {
+        "title": "El Servicio",
+        "description": "WebpWizard es un convertidor de imágenes gratis en línea que convierte imágenes entre formatos WebP, PNG y JPG. El servicio se proporciona 'tal cual' sin garantías de ningún tipo."
+      },
+      "noAccount": {
+        "title": "Sin Registro Requerido",
+        "description": "No necesitas crear una cuenta para usar nuestro servicio. No se requiere información personal."
+      },
+      "limitations": {
+        "title": "Limitaciones",
+        "description": "Aunque nos esforzamos por la precisión, no podemos garantizar que todas las conversiones serán perfectas. Siempre mantén copias de seguridad de tus imágenes originales."
+      },
+      "intellectual": {
+        "title": "Propiedad Intelectual",
+        "description": "Conservas todos los derechos sobre tus imágenes. No reclamamos ninguna propiedad del contenido que procesas a través de nuestro servicio."
+      },
+      "liability": {
+        "title": "Limitación de Responsabilidad",
+        "description": "WebpWizard y sus creadores no serán responsables de ningún daño derivado del uso de este servicio."
+      },
+      "changes": {
+        "title": "Cambios en los Términos",
+        "description": "Podemos actualizar estos términos en cualquier momento. El uso continuado del servicio constituye la aceptación de los cambios."
+      }
+    }
+  },
+  "common": {
+    "back": "Atrás",
+    "home": "Inicio",
+    "readMore": "Leer más",
+    "learnMore": "Más información"
+  }
+}

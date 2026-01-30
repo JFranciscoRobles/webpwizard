@@ -1,0 +1,278 @@
+{
+  "meta": {
+    "title": "WebpWizard - 免费在线图片转换器 | WebP、PNG、JPG",
+    "description": "即时将图片转换为 WebP、PNG 或 JPG 格式。免费、快速且100%私密 - 所有处理都在您的浏览器中进行。无需上传，无需等待。",
+    "keywords": "图片转换器, WebP转换器, PNG转WebP, JPG转WebP, 批量图片转换, 免费图片工具"
+  },
+  "header": {
+    "title": "WebpWizard",
+    "description": "转换为 WebP、PNG 或 JPG — 快速且私密"
+  },
+  "features": {
+    "title": "闪电般快速",
+    "description": "所有处理都在您的浏览器本地进行。无需上传，无需等待。",
+    "privacy": {
+      "title": "100% 私密",
+      "description": "您的图片永远不会离开您的设备。没有服务器，没有跟踪，没有烦恼。"
+    },
+    "batch": {
+      "title": "批量转换",
+      "description": "一次转换多张图片，并将它们下载为单个 ZIP 文件。"
+    }
+  },
+  "howItWorks": {
+    "title": "如何工作",
+    "steps": {
+      "upload": {
+        "title": "上传",
+        "description": "拖放或选择您的图片"
+      },
+      "configure": {
+        "title": "配置",
+        "description": "选择格式、质量和尺寸"
+      },
+      "download": {
+        "title": "下载",
+        "description": "立即获取转换后的图片"
+      }
+    }
+  },
+  "upload": {
+    "title": "将图片拖放到此处",
+    "subtitle": "或点击从您的设备中浏览",
+    "selectImages": "选择图片",
+    "error": "仅允许 JPEG、PNG 和 WebP 图片。"
+  },
+  "settings": {
+    "title": "设置",
+    "outputFormat": "输出格式",
+    "formats": {
+      "webp": "WebP",
+      "jpeg": "JPEG",
+      "png": "PNG"
+    },
+    "formatDescriptions": {
+      "webp": "最佳压缩，现代格式",
+      "jpeg": "最大兼容性",
+      "png": "无损压缩"
+    },
+    "quality": {
+      "title": "质量",
+      "level": "质量级别",
+      "notAvailable": "质量（PNG 不适用）",
+      "smaller": "文件更小",
+      "better": "质量更好",
+      "labels": {
+        "low": "低",
+        "medium": "中",
+        "good": "好",
+        "best": "最佳"
+      }
+    },
+    "resize": {
+      "title": "调整大小",
+      "imageSize": "图片尺寸",
+      "original": "原始",
+      "small": "小",
+      "medium": "中",
+      "large": "大"
+    },
+    "fileNaming": {
+      "title": "文件命名",
+      "placeholder": "例如，converted_",
+      "label": "转换文件的可选前缀",
+      "preview": "预览："
+    },
+    "ready": {
+      "title": "准备转换",
+      "images": "图片"
+    }
+  },
+  "queue": {
+    "title": "队列",
+    "images": "张图片准备转换",
+    "noImages": "队列中没有图片。添加图片以开始。"
+  },
+  "converting": "转换中...",
+  "startConversion": "开始转换",
+  "status": {
+    "queued": "队列中",
+    "converting": "转换中...",
+    "finalizing": "完成中...",
+    "done": "完成",
+    "error": "错误"
+  },
+  "converted": {
+    "title": "已转换的图片",
+    "complete": "已完成 {count} 张",
+    "downloadAll": "下载全部（{count}张）为 ZIP",
+    "downloadAllShort": "下载全部",
+    "asZip": "为 ZIP",
+    "reset": "重置"
+  },
+  "toasts": {
+    "noImages": {
+      "title": "队列中没有图片",
+      "description": "请在开始转换之前添加一些图片。"
+    },
+    "conversionComplete": {
+      "title": "转换完成",
+      "description": "所有 {count} 张图片已成功转换。",
+      "descriptionSingle": "1 张图片已成功转换。"
+    },
+    "conversionWithWarnings": {
+      "title": "转换完成但有警告",
+      "description": "{success} 张图片成功转换。{failed} 张失败。"
+    },
+    "conversionError": {
+      "title": "转换期间出错",
+      "description": "部分图片无法转换。"
+    },
+    "downloadStarted": {
+      "title": "下载已开始",
+      "description": "{fileName} 正在下载。"
+    },
+    "downloadAllStarted": {
+      "title": "下载已开始",
+      "description": "所有转换后的图片正在下载为 ZIP。"
+    },
+    "resetComplete": {
+      "title": "重置完成",
+      "description": "所有图片和设置已重置。"
+    }
+  },
+  "footer": {
+    "title": "WebpWizard — 免费图片转换器",
+    "github": "GitHub",
+    "privacy": "所有转换都在您的浏览器本地进行。您的图片永远不会上传到任何服务器。",
+    "about": "关于",
+    "privacyPolicy": "隐私政策",
+    "terms": "条款和条件"
+  },
+  "stepper": {
+    "queue": "队列",
+    "settings": "设置",
+    "back": "返回",
+    "next": "下一步",
+    "convert": "转换"
+  },
+  "pages": {
+    "about": {
+      "meta": {
+        "title": "关于 WebpWizard - 免费在线图片转换器",
+        "description": "了解 WebpWizard，注重隐私的免费在线图片转换器。在您的浏览器中本地转换 WebP、PNG 和 JPG 文件。"
+      },
+      "title": "关于 WebpWizard",
+      "subtitle": "快速、免费且私密的图片转换",
+      "whatIs": {
+        "title": "什么是 WebpWizard？",
+        "description": "WebpWizard 是一个完全在您的浏览器中运行的免费在线图片转换器。与其他转换器不同，我们不会将您的图片上传到任何服务器 - 所有处理都在您的设备本地进行。"
+      },
+      "features": {
+        "title": "为什么选择 WebpWizard？",
+        "privacy": {
+          "title": "100% 私密",
+          "description": "您的图片永远不会离开您的设备。无服务器上传，无数据收集。"
+        },
+        "fast": {
+          "title": "闪电般快速",
+          "description": "即时转换图片，无需等待上传或下载。"
+        },
+        "free": {
+          "title": "完全免费",
+          "description": "无需订阅，无隐藏费用，无需注册账户。"
+        },
+        "batch": {
+          "title": "批量转换",
+          "description": "一次转换多张图片并下载为 ZIP 文件。"
+        }
+      },
+      "howItWorks": {
+        "title": "工作原理",
+        "description": "我们使用现代网络技术直接在您的浏览器中处理图片："
+      },
+      "step1": "上传您的图片（拖放或点击浏览）",
+      "step2": "选择输出格式（WebP、PNG 或 JPG）、质量和大小",
+      "step3": "即时下载转换后的图片",
+      "openSource": {
+        "title": "开源",
+        "description": "WebpWizard 是开源软件。您可以在 GitHub 上查看代码。"
+      }
+    },
+    "privacy": {
+      "meta": {
+        "title": "隐私政策 - WebpWizard",
+        "description": "WebpWizard 隐私政策。了解我们如何保护您的隐私 - 所有图片处理都在您的浏览器本地进行。"
+      },
+      "title": "隐私政策",
+      "lastUpdated": "最后更新：2025年1月",
+      "intro": "在 WebpWizard，我们非常重视您的隐私。本政策解释了我们如何处理您的数据。",
+      "noDataCollection": {
+        "title": "不收集数据",
+        "description": "所有图片处理都在您的浏览器本地进行。您的图片永远不会上传到我们的服务器或任何第三方服务。"
+      },
+      "whatWeCollect": {
+        "title": "我们收集什么",
+        "analytics": {
+          "title": "匿名分析",
+          "description": "我们使用 Google Analytics 来了解人们如何使用我们的网站。此数据是匿名的，不包含任何个人信息或图片数据。"
+        }
+      },
+      "cookies": {
+        "title": "Cookie",
+        "description": "我们仅使用最少的 Cookie 进行分析。不使用跟踪 Cookie。"
+      },
+      "thirdParty": {
+        "title": "第三方服务",
+        "description": "我们使用 Google Analytics 进行匿名使用统计。没有其他第三方服务可以访问您的数据。"
+      },
+      "yourRights": {
+        "title": "您的权利",
+        "description": "由于我们不收集个人数据，因此无需请求或删除任何内容。您的图片永远不会离开您的设备。"
+      },
+      "contact": {
+        "title": "有问题吗？",
+        "description": "如果您对本隐私政策有疑问，请通过我们的 GitHub 仓库联系我们。"
+      }
+    },
+    "terms": {
+      "meta": {
+        "title": "条款和条件 - WebpWizard",
+        "description": "WebpWizard 条款和条件。免费在线图片转换器，无需注册。"
+      },
+      "title": "条款和条件",
+      "lastUpdated": "最后更新：2025年1月",
+      "intro": "使用 WebpWizard 即表示您同意这些条款。如果您不同意，请不要使用此服务。",
+      "service": {
+        "title": "服务",
+        "description": "WebpWizard 是一个免费在线图片转换器，可在 WebP、PNG 和 JPG 格式之间转换图片。该服务按原样提供，不提供任何形式的保证。"
+      },
+      "noAccount": {
+        "title": "无需注册",
+        "description": "您无需创建账户即可使用我们的服务。不需要提供个人信息。"
+      },
+      "limitations": {
+        "title": "限制",
+        "description": "虽然我们力求准确，但无法保证所有转换都是完美的。请始终保留原始图片的备份。"
+      },
+      "intellectual": {
+        "title": "知识产权",
+        "description": "您保留对图片的所有权利。我们不对通过我们服务处理的内容主张任何所有权。"
+      },
+      "liability": {
+        "title": "责任限制",
+        "description": "WebpWizard 及其创建者对因使用本服务而产生的任何损害不承担任何责任。"
+      },
+      "changes": {
+        "title": "条款变更",
+        "description": "我们可以随时更新这些条款。继续使用本服务即表示接受变更。"
+      }
+    }
+  },
+  "common": {
+    "back": "返回",
+    "home": "首页",
+    "readMore": "阅读更多",
+    "learnMore": "了解更多"
+  }
+}

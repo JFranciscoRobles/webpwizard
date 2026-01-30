@@ -1,8 +1,9 @@
 "use client";
-import { useToast } from "@/hooks/use-toast";
+import { toast } from "@/hooks/use-toast";
 import React from "react";
 import { Button } from "./ui/button";
 import { useSetAtom } from "jotai";
+import { RotateCcw } from "lucide-react";
 import {
   convertedImagesAtom,
   filePrefixAtom,
@@ -12,8 +13,12 @@ import {
   queuedImagesAtom,
   resizePercentageAtom,
 } from "@/context/atom";
+import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
-function ResetButton() {
+function ResetButton({ className }: { className?: string }) {
+  const t = useTranslations('converted');
+  const tToast = useTranslations('toasts');
   const setQueuedImages = useSetAtom(queuedImagesAtom);
   const setConvertedImages = useSetAtom(convertedImagesAtom);
   const setQuality = useSetAtom(qualityAtom);
@@ -21,8 +26,6 @@ function ResetButton() {
   const setFilePrefix = useSetAtom(filePrefixAtom);
   const setOutputFormat = useSetAtom(outputFormatAtom);
   const setIsConverting = useSetAtom(isConvertingAtom);
-
-  const { toast } = useToast();
 
   const handleReset = () => {
     setQueuedImages([]);
@@ -34,14 +37,20 @@ function ResetButton() {
     setIsConverting(false);
 
     toast({
-      title: "Reset Complete",
-      description: "All images and settings have been reset.",
+      title: tToast('resetComplete.title'),
+      description: tToast('resetComplete.description'),
+      variant: "success",
     });
   };
 
   return (
-    <Button variant="destructive" onClick={handleReset}>
-      Reset all
+    <Button
+      variant="outline"
+      onClick={handleReset}
+      className={cn("border-border/50 hover:bg-destructive/10 hover:text-destructive hover:border-destructive/20 transition-all duration-200", className)}
+    >
+      <RotateCcw className="w-4 h-4 mr-2" />
+      {t('reset')}
     </Button>
   );
 }
